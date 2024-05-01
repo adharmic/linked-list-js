@@ -134,4 +134,41 @@ module.exports = class LinkedList {
         })
     }
 
+    insertAt(value, index) {
+        if (index <= 0) {
+            this.prepend(value);
+            return;
+        }
+        if (index >= this.size - 1) {
+            this.append(value);
+            return;
+        }
+        let newNode = new LinkedNode(value, this.at(index + 1));
+        this.at(index - 1).nextNode = newNode;
+        this.size++;
+        return; 
+    }
+
+    removeAt(index) {
+        if (this.size == 1) {
+            this.head = null;
+            this.size--;
+            return;
+        }
+        if (index <= 0) {
+            let newNext = this.head.nextNode?.nextNode;
+            this.head = this.head.nextNode;
+            this.head.nextNode = newNext;
+            this.size--;
+            return;
+        }
+        if (index >= this.size - 1) {
+            this.pop();
+            return;
+        }
+        this.at(index - 1).nextNode = this.at(index + 1);
+        this.size--;
+        return;
+    }
+
 }
