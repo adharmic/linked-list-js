@@ -1,10 +1,11 @@
 const LinkedNode = require('./linked_node');
 
 module.exports = class LinkedList {
-    constructor(head) {
-        this._head = head;
+    constructor(value, nextNode) {
+        this.head = new LinkedNode(value, nextNode);
+        if (value === undefined || nextNode === undefined) this.head = null;
         
-        head === null ? this._size = 0 : this._size = 1;
+        this.head === null ? this._size = 0 : this._size = 1;
     }
 
     get size() {

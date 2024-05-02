@@ -1,12 +1,20 @@
 {
-  "name": "linked_list",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@adharmic/linked_list",
+  "version": "1.0.2",
+  "main": "linked_list.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Adithya Ajith",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adharmic/linked-list-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adharmic/linked-list-js/issues"
+  },
+  "homepage": "https://github.com/adharmic/linked-list-js#readme",
   "description": ""
 }
